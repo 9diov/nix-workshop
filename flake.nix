@@ -18,7 +18,14 @@
       {
         packages = {
           default = pkgs.buildEnv {
-            name = "example";
+            name = "default";
+            paths = with pkgs; [
+              hello
+            ];
+          };
+
+          example1 = pkgs.buildEnv {
+            name = "example1";
             paths = with pkgs; [
               hello
               cowsay
